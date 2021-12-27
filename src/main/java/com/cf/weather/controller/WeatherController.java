@@ -19,7 +19,8 @@ public class WeatherController {
 	WeatherService weatherService;
 	
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)	
-	public ResponseEntity<RestWeatherResponseBO> getWeatherForecast(@RequestParam(required = true) String city) {	
+	public ResponseEntity<RestWeatherResponseBO> getWeatherForecast(@RequestParam(required = true) String city) {
+system.out.println("HI")	;	
  		return (ResponseEntity<RestWeatherResponseBO>) weatherService.weatherForecastByCity(city);
     }
 
